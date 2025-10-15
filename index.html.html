@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página Principal - Mis Proyectos</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #10598A, #1E1A4D);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    color: #FAFAF9;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 2.2em;
+  }
+
+  p {
+    color: #FAFAF9;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .boton {
+    background-color: #FEE685;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  .boton:hover {
+    background-color: #0d47a1;
+    transform: scale(1.08);
+  }
+
+  iframe {
+    width: 90%;
+    height: 520px;
+    border: 2px solid #F0FDFA;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 600px) {
+    .boton { width: 100%; font-size: 15px; }
+    iframe { height: 400px; }
+  }
+</style>
+</head>
+
+<body>
+  <h1>Proyectos Maria Vanessa Hernandez Herrera</h1>
+  <p>Selecciona un proyecto:</p>
+
+  <div class="contenedor-botones"> 
+    <button class="boton" onclick="mostrarProyecto('Proyecto1')">Muñeco De Nieve Que Saluda</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto2')">Día Nevado Soleado</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto3')">¿Qué hay de Cenar?</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto4')">Dientes De Conejo</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto5')">Rana</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto6')">Sol Que Explota</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto7')">Nubes Que Se Separan</button>
+    <button class="boton" onclick="mostrarProyecto('Proyecto8')">Estrella Fugaz</button>
+  </div>
+
+  <iframe id="visor"></iframe>
+
+  <script>
+    function mostrarProyecto(nombre) {
+      const proyectos = {
+        Proyecto1: `
+          <h1>MUÑECO DE NIEVE QUE SALUDANDO</h1>
+          <h2>Derivado de "Desafío: Muñeco de Nieve Saludando"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-desafo-mueco-de-nieve-sencillo/6630061202063360/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto2: `
+          <h1>DÍA NEVADO SOLEADO</h1>
+          <h2>Derivado de "Desafío: Día Nevado Soleado"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-desafo-da-nevado-soleado/6012524026249216embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto3: `
+          <h1>¿QUÉ HAY DE CENAR?</h1>
+          <h2>Derivado de "Desafío: ¿Qué hay de cenar?"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-proyecto-qu-hay-de-cena/4819235143008256/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto4: `
+          <h1>DIENTES DE CONEJO</h1>
+          <h2>Derivado de "Desafío: Dientes de Conejo"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-desafo-dientes-de-conejo/5994471121076224/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto5: `
+          <h1>RANA</h1>
+          <h2>Derivado de "Desafío: Rana"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-desafo-rana-loca/6542507874304000/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto6: `
+          <h1>SOL QUE EXPLOTA</h1>
+          <h2>Derivado de "Desafío: Sol que Explota"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-desafo-el-sol-que-explota/5120898798043136/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto7: `
+          <h1>NUBES QUE SE SEPARAN</h1>
+          <h2>Derivado de "Desafío: Nubes que se separan"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-desafo-nubes-que-se-separan/5044927134810112/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`,
+
+        Proyecto8: `
+          <h1>ESTRELLA FUGAZ</h1>
+          <h2>Derivado de "Desafío: Estrella Fugaz"</h2>
+          <script src="https://es.khanacademy.org/computer-programming/derivado-de-proyecto-estrella-fugaz/4688300112199680/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"><\/script>
+          <p>Se hizo usando: <a href="http://www.khanacademy.org/computer-programming" target="_blank">Khan Academy Computer Science</a></p>`
+      };
+
+      const iframe = document.getElementById("visor");
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(`
+        <html><head><style>
+        body { font-family: Arial; text-align:center; background:#e3f2fd; margin:0; padding:20px; }
+        h1 { color:#0d47a1; }
+        h2 { color:#1976d2; }
+        a { color:#0d47a1; font-weight:bold; }
+        </style></head><body>${proyectos[nombre]}</body></html>
+      `);
+      doc.close();
+    }
+  </script>
+</body>
+</html>
